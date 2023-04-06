@@ -1,0 +1,148 @@
+@import url(https://fonts.google.com/specimen/Plus+Jakarta+Sans);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-grayish-blue: hsl(210, 60%, 98%);
+  --Blue: hsl(219, 85%, 26%);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  background-color: hsl(205, 33%, 90%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+#notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1em;
+}
+#read {
+  cursor: pointer;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 0 0.5rem;
+  border-radius: 0.75rem;
+}
+
+article header {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+}
+
+article.active {
+  background-color: var(--Dark-grayish-blue);
+  cursor: pointer;
+}
+
+article .card {
+  display: flex;
+  /* flex-direction: column; */
+  /* background-color: #fff; */
+  gap: 0 0.5rem;
+}
+
+/* TEXT */
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.25rem;
+}
+
+p span {
+  color: hsl(219, 12%, 42%);
+}
+
+.time {
+  color: hsl(219, 14%, 63%);
+}
+
+.reacted {
+  color: hsla(224, 21%, 14%, 0.6);
+  font-weight: 600;
+}
+
+article.active .action::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.group {
+  color: var(--Blue);
+  font-weight: 600;
+}
+
+.message {
+  margin-inline: 3rem;
+  border-radius: 1rem;
+  border: 1px solid hsla(219, 14%, 63%, 0.4);
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+#count {
+  color: #fff;
+  background-color: var(--Blue);
+  padding: 0.1rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* IMAGE */
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-inline: 0.5rem;
+}
+
+.pic {
+  width: 45px;
+  height: 45px;
+}
+
+@media (min-width: 444px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+  main {
+    width: 40%;
+    border-radius: 20px;
+    height: 60%;
+    margin: 3rem;
+  }
+}
