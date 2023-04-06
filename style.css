@@ -140,7 +140,7 @@ article.active .action::after {
     /* height: 100vh; */
   }
   main {
-    width: 40%;
+    width: 50%;
     border-radius: 20px;
     height: 60%;
     margin: 3rem;
